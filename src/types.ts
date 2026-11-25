@@ -14,7 +14,7 @@ export interface AuthResponse{
 }
 
 export interface Material {
-    id: string;
+    id: number;
     name: string;
     active: boolean;
 }
@@ -32,10 +32,10 @@ export interface CollectionPage{
     page: number;
     size: number;
     totalItems: number;
-    totalPage:number;
+    totalPages:number;
 }
 
-export interface DeliviryRequest{
+export interface DeliveryRequest{
     materialId: number;
     weightKg: number;
 }
