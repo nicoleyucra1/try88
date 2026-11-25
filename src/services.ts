@@ -8,16 +8,16 @@ export async function loginRequest(data: LoginRequest): Promise<AuthResponse> {
 
 
 export async function registerRequest(data: RegisterRequest): Promise<void> {
-    await api.post<AuthResponse>('/api/auth/login', data);
+    await api.post<AuthResponse>('/api/auth/register', data);
 }
 
 export async function getCollections(page: number): Promise<CollectionPage>{
-    const res = await api.get<CollectionPage>('/api/collections-points', {params:{page, size: 5}} );
+    const res = await api.get<CollectionPage>('/api/collection-points', {params:{page, size: 5}} );
     return res.data
 }
 
 export async function getCollection(id: number): Promise<Collection> {
-    const res = await api.get<Collection>(`/api/collections-points/${id}`);
+    const res = await api.get<Collection>(`/api/collection-points/${id}`);
     return res.data;
 }
 

@@ -12,10 +12,10 @@ export default function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route element={<Layout/>}>
-        <Route path="/collections-points" element={<CollectionsPage/>}/>
-        <Route path="/collections-points/:id" element={<CollectionsDetailsPage/>}/>
+        <Route path="/collection-points" element={<CollectionsPage/>}/>
+        <Route path="/collection-points/:id" element={<CollectionsDetailsPage/>}/>
       </Route>
-      <Route path="*" element={<Navigate to="/collections-points" replace/>}/>
+      <Route path="*" element={<Navigate to="/collection-points" replace/>}/>
     </Routes>
   )
 }

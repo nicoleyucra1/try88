@@ -8,7 +8,7 @@ export default function Layout(){
     return (
         <div className='p-6'>
             <div className='flex justify-between mb-4'>
-                <Link to="/collections-point">Colecciones</Link>
+                <Link to="/collection-point">Colecciones</Link>
                 <button onClick={logout} className="btn btn-sm">Cerrar sesion</button>
             </div>
             <Outlet/>

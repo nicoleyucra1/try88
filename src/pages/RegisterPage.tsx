@@ -32,7 +32,8 @@ export default function RegisterPage() {
             {success && <div className="alert alert-success">{success}</div>}
             <input placeholder="Nombre" required maxLength={100} value={name} onChange={(e) => setName(e.target.value)} className='input'/>
             <input type="email" placeholder="Correo" required value={email} onChange={(e) => setEmail(e.target.value)} className='input'/>
-            <input type="password" placeholder="Contraseña" required minLength={8} maxLength={72} pattern="[ -~]" title="Solo letras sin tilde, numeros y simbolos" value={password} onChange={(e) => setPassword(e.target.value)} className='input'/>
+            <input type="password" placeholder="Contraseña" required minLength={8} maxLength={72} pattern="[ -~]*" title="Solo letras sin tilde, numeros y simbolos" value={password} onChange={(e) => setPassword(e.target.value)} className='input'/>
+            <button className="btn btn-primary">Registrarme</button>
             <p>¿Ya tienes cuenta?<Link to="/login" className="linl link-primary">Inicia sesion</Link></p>
         </form>
     )

@@ -51,7 +51,7 @@ export default function CollectionsPage() {
                                 <td>{g.zone}</td>
                                 <td>{g.status}</td>
                                 <td>{g.materials.map((m) => m.name).join(', ')}</td>
-                                <td><Link to={`collections/${g.id}`} className='btn btn-sm'>Ver</Link></td>
+                                <td><Link to={`/collection-points/${g.id}`} className='btn btn-sm'>Ver</Link></td>
                             </tr>
                         ))}
                     </tbody>

@@ -18,7 +18,7 @@ export default function LoginPage() {
         try {
             const data = await loginRequest({email, password});
             login (data.token);
-            navigate('/collections-points');
+            navigate('/collection-points');
         } catch (err) {
             setError(getErrorMessage(err));
         }
